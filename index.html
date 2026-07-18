@@ -1,222 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio website</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Nirul Chauhan | Python Full Stack Developer & DevOps Engineer</title>
+    <meta name="description"
+        content="Portfolio of Nirul Chauhan — Python Full Stack Developer & DevOps Engineer specializing in scalable web applications, cloud infrastructure, and automation.">
+    <meta name="keywords"
+        content="Nirul Chauhan, Python Developer, Full Stack Developer, DevOps Engineer, Portfolio, Django, React, AWS, Docker">
+    <meta name="author" content="Nirul Chauhan">
 
-    <script src="https://kit.fontawesome.com/d38b274b3a.js" crossorigin="anonymous"></script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nirul Chauhan | Python Full Stack Developer & DevOps Engineer">
+    <meta property="og:description"
+        content="Building scalable web applications and robust cloud infrastructure. View my work and get in touch.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="user.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nirul Chauhan | Python Full Stack Developer & DevOps Engineer">
+    <meta name="twitter:description" content="Building scalable web applications and robust cloud infrastructure.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
-    <div id="header">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>NC<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Nirul Chauhan</h1>
+                <div class="hero-title-wrap">
+                    <span class="hero-title-prefix">I'm a </span>
+                    <span class="hero-typing" id="typingText"></span>
+                    <span class="hero-cursor">|</span>
+                </div>
+                <p class="hero-tagline">Building scalable web applications and robust cloud infrastructure. Passionate
+                    about clean code, automation, and solving real-world problems through technology.</p>
+                <div class="hero-cta">
+                    <a href="Nirul_Chauhan__[1].pdf" download class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i> View Resume
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/Nirul-chauhan" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nirul-chauhan-570a842a2" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://leetcode.com/u/Nirul_tmu/" target="_blank" rel="noopener" aria-label="LeetCode"><i
+                            class="fa-solid fa-code"></i></a>
+                    <a href="https://www.hackerrank.com/profile/nirulchauhan9045" target="_blank" rel="noopener"
+                        aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nirulchauhan9045@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="user.jpg" alt="Nirul Chauhan" loading="eager">
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <nav>
-                <img src="logo.jpg " class="logo ">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Services">Service</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-house" onclick="openmenu()"></i>
-            </nav>
+            <h2 class="section-title">About <span class="accent">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="user.jpg" alt="Nirul Chauhan" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <p>I'm a passionate <strong>Python Full Stack Developer & DevOps Engineer</strong> with a strong
+                        foundation in building end-to-end web applications and automating deployment pipelines. I hold
+                        an <strong>MCA (Master of Computer Applications)</strong> and currently work at <strong>3i
+                            Consulting</strong> as an SDE 1, where I architect and deliver production-grade solutions.
+                    </p>
+                    <p>I thrive at the intersection of development and operations — writing clean Python code, building
+                        REST APIs, containerizing services with Docker, and deploying on cloud platforms. I'm also an
+                        active problem-solver on LeetCode and HackerRank, constantly sharpening my DSA skills.</p>
+                    <div class="quick-facts">
+                        <div class="fact">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <div>
+                                <span class="fact-label">Experience</span>
+                                <span class="fact-value">2+ Years</span>
+                            </div>
+                        </div>
+                        <div class="fact">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span class="fact-label">Location</span>
+                                <span class="fact-value">India</span>
+                            </div>
+                        </div>
+                        <div class="fact">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <span class="fact-label">Company</span>
+                                <span class="fact-value">3i Consulting</span>
+                            </div>
+                        </div>
+                        <div class="fact">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div>
+                                <span class="fact-label">Availability</span>
+                                <span class="fact-value open-to-work">Open to Work</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="header-text ">
-                <p>Software Engineer</p>
-                <h1> Hi,I'm <span> Nirul Chauhan</span> from India</h1>
-            </div>
-        </div>
-    </div>
-    <!--------about-------->
-    <div id="about">
-        <div class="container ">
-            <div class="row ">
-                <div class="about-col-1 ">
-                    <img src="user.jpg ">
-                </div>
-                <div class="about-col-2 ">
-                    <h1 class="sub-title ">About Me</h1>
-                    <p>I'm Nirul Chauhan I belong to Amroha UP 244241 <br>I have completed my Graduation B.Sc(Hons) Computer science from <br>Teerthanker Mahaveer University Moradabad with 81.02%</p>
-                    <div class="tab-titles ">
-                        <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience') ">Experience</p>
-                        <p class="tab-links" onclick="opentab('eduction')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Software development</span><br>Development</li>
-                            <li><span>Web Developer</span><br>Website Development</li>
-                            <li><span>App Development</span><br>Building App</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Software tools</span><br>visual Studio code / notpad++/Github</li>
-                            <li><span>Backend</span><br>Java,C</li>
-                            <li><span>Frontend</span><br>HTML,CSS,JavaScript</li>
-                            <li><span>Database</span><br> SQL, MySQL</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="eduction">
-                        <ul>
-                            <li><span>2022-2025</span><br>B.Sc(Hons)Computer science</li>
-                            <li><span>2021</span><br>CCC from NIELIT Borad with C Grade</li>
-                            <li><span>2022</span><br>Intermediate from UP Board with 74.5%</li>
-                            <li><span>2020</span><br>HighSchool from UP Board with 78.5%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-------Services------->
-    <div id="Services">
-        <div class="container ">
-            <h1 class="sub-title ">My Services</h1>
-            <div class="services-list ">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2> Designer</h2>
-                    <p>Designers create visual concepts jusing cre-activity and technical skills. </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2> Website Development</h2>
-                    <p>A website designer creates the visual aspects of website, including theis layout, graphics and user experience.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
-                    <h2> App Designer</h2>
-                    <p>App Developer designs, builds and maintains software applications for ckients.</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-----portfolio------>
-    <div id="portfolio">
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <h1 class="sub-title ">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="work-1.png">
-                    <div class="layer">
-                        <h3> Social media</h3>
-                        <p> The app connects you to the talented people around the word. Download from the play store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <h2 class="section-title">My <span class="accent">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">Python</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Java</span>
+                        <span class="chip">C</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">HTML5</span>
+                        <span class="chip">CSS3</span>
+                        <span class="chip">Bash</span>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="work-2.png">
-                    <div class="layer">
-                        <h3> Music app</h3>
-                        <p> The app connects you to the talented people around the word. Download from the play store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">Django</span>
+                        <span class="chip">Django REST Framework</span>
+                        <span class="chip">React.js</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">Express.js</span>
+                        <span class="chip">Tailwind CSS</span>
+                        <span class="chip">Bootstrap</span>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="work-3.png">
-                    <div class="layer">
-                        <h3> Online shopping app</h3>
-                        <p> The app connects you to the talented people around the word. Download from the play store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">PostgreSQL</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">Redis</span>
+                        <span class="chip">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>DevOps & Cloud</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">Docker</span>
+                        <span class="chip">Docker Compose</span>
+                        <span class="chip">AWS</span>
+                        <span class="chip">CI/CD</span>
+                        <span class="chip">GitHub Actions</span>
+                        <span class="chip">Nginx</span>
+                        <span class="chip">Linux</span>
+                        <span class="chip">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <h3>Tools & AI-Assisted Development</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="chip">VS Code</span>
+                        <span class="chip">PyCharm</span>
+                        <span class="chip">Postman</span>
+                        <span class="chip">Jira</span>
+                        <span class="chip">GitHub Copilot</span>
+                        <span class="chip">ChatGPT / LLMs</span>
+                        <span class="chip">Figma</span>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
         </div>
-    </div>
-    <!------ contact-------------->
+    </section>
 
-    <div id="contact">
+    <!-- Experience Section -->
+    <section id="experience">
         <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>nirulchauhan9045@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>+91 9045995741</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/nirul-chauhan-570a842a2"><i class="fa-brands fa-linkedin"></i></a>
+            <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>SDE 1</h3>
+                                <p class="timeline-company">3i Consulting</p>
+                            </div>
+                            <span class="timeline-date">2024 — Present</span>
+                        </div>
+                        <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> India</p>
+                        <ul class="timeline-bullets">
+                            <li>Architected and deployed microservices using Django REST Framework and Docker, reducing
+                                deployment time by 40%</li>
+                            <li>Built automated CI/CD pipelines with GitHub Actions, enabling zero-downtime deployments
+                                to AWS EC2 instances</li>
+                            <li>Developed real-time data dashboards with React.js and WebSockets, serving 500+ daily
+                                active users</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Django</span><span>Docker</span><span>AWS</span><span>React</span><span>PostgreSQL</span>
+                        </div>
                     </div>
-                    <a href="Nirul(2)-chauhan-resume[2].docx" Download class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2"> Submit</button>
-                    </form>
-                    <span id="msg"></span>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Web Development Intern</h3>
+                                <p class="timeline-company">Xzect</p>
+                            </div>
+                            <span class="timeline-date">2023 — 2024</span>
+                        </div>
+                        <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> India</p>
+                        <ul class="timeline-bullets">
+                            <li>Developed and maintained client-facing web applications using Django and vanilla
+                                JavaScript</li>
+                            <li>Implemented responsive UI designs and RESTful APIs, improving page load speed by 30%
+                            </li>
+                            <li>Collaborated with cross-functional teams using Git workflows and Agile methodologies
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Django</span><span>JavaScript</span><span>HTML/CSS</span><span>Git</span><span>MySQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="copyright">
-            <p>Copyright @ Nirul. Made <i class="fa-solid fa-heart"></i> by Nirul Chauhan</p>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="ecommerce">
+                    <div class="project-image">
+                        <img src="work-1.png" alt="E-Commerce Website" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>Full-featured online store with product catalog, cart, checkout, payment integration, and
+                            admin dashboard.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>React</span><span>PostgreSQL</span><span>Stripe</span><span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                                Demo</a>
+                            <a href="#" class="btn btn-sm btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="weather">
+                    <div class="project-image">
+                        <img src="work-2.png" alt="Weather App" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>Real-time weather application with location-based forecasts, interactive maps, and 7-day
+                            predictions using third-party APIs.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Django</span><span>REST
+                                API</span><span>JavaScript</span><span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                                Demo</a>
+                            <a href="#" class="btn btn-sm btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="madhav">
+                    <div class="project-image">
+                        <img src="work-3.png" alt="Madhav Mini Mart" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Madhav Mini Mart</h3>
+                        <p>Inventory management and point-of-sale system for a local retail store with real-time stock
+                            tracking and sales analytics.</p>
+                        <div class="project-tags">
+                            <span>Django</span><span>SQLite</span><span>JavaScript</span><span>Bootstrap</span><span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                                Demo</a>
+                            <a href="#" class="btn btn-sm btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content" id="modalContent"></div>
         </div>
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links ");
-        var tabcontents = document.getElementsByClassName("tab-contents ");
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & <span class="accent">Achievements</span></h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-brands fa-hackerrank"></i></div>
+                    <h3>HackerRank</h3>
+                    <p class="cert-detail">5-Star Rating in Python</p>
+                    <p class="cert-desc">Achieved 5-star rating demonstrating advanced proficiency in Python problem
+                        solving and algorithms.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>LeetCode</h3>
+                    <p class="cert-detail">Contest Rank: Top Performer</p>
+                    <p class="cert-desc">Consistent performer in weekly contests with strong problem-solving skills in
+                        Data Structures & Algorithms.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>IIT Bombay</h3>
+                    <p class="cert-detail">C Programming Certificate</p>
+                    <p class="cert-desc">Completed certified course in C Programming from IIT Bombay, covering
+                        fundamentals to advanced concepts.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                    <h3>AWS Cloud</h3>
+                    <p class="cert-detail">Cloud Practitioner</p>
+                    <p class="cert-desc">Foundational understanding of AWS cloud services, architecture, and best
+                        practices for deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nirulchauhan9045@gmail.com" target="_blank" rel="noopener">nirulchauhan9045@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+919045995741">+91 9045995741</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span>India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/Nirul-chauhan" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nirul-chauhan-570a842a2" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://leetcode.com/u/Nirul_tmu/" target="_blank" rel="noopener"><i
+                                class="fa-solid fa-code"></i></a>
+                        <a href="https://www.hackerrank.com/profile/nirulchauhan9045" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-hackerrank"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        function openmenu() {
-            sidemeu.style.right = "0";
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>NC<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/Nirul-chauhan" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nirul-chauhan-570a842a2" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://leetcode.com/u/Nirul_tmu/" target="_blank" rel="noopener"><i
+                        class="fa-solid fa-code"></i></a>
+                <a href="https://www.hackerrank.com/profile/nirulchauhan9045" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-hackerrank"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nirulchauhan9045@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="footer-credit">Built with <span class="accent">HTML</span>, <span class="accent">CSS</span> &
+                <span class="accent">JavaScript</span>. Designed by Nirul Chauhan.</p>
+        </div>
+    </footer>
 
-        }
-
-        function closemenu() {
-            sidemeu.style.right = "-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzmK-jwBQXRxh1_zBJbihxXs5XVf_hatP8PAJqZEwNT9nPFlE8vzh1bELSkjXuGNW99/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, {
-                    method: 'POST',
-                    body: new FormData(form)
-                })
-                .then(response => {
-                    msg.innerHTML = "Message sent succesfully"
-                    setTimeout(function() {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
